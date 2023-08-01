@@ -1,0 +1,13 @@
+{
+  "sections": {
+    "8c961285-a429-4f40-ba3c-9290ceb22e26": {
+      "type": "featured-collection-carousel",
+      "settings": {
+        "collection": "ts"
+      }
+    }
+  },
+  "order": [
+    "8c961285-a429-4f40-ba3c-9290ceb22e26"
+  ]
+}

@@ -1,0 +1,37 @@
+
+
+<div class="featured-product-carousel">
+    {%assign products = section.settings.collection.products%}
+    {%for product in products%}
+        <a href="{{product.url}}">
+            <div class="carousel-product">
+                <div class="product-image">
+                    <img src="{{product.featured_image | img_url: '500x'}}">
+                </div>
+                <div class="product-info">
+                    <h2>{{product.title}}</h2>
+                </div>
+            </div>
+        </a>
+    {%endfor%}
+</div>
+
+
+
+{% schema %}
+    {
+        "name": "Featured Cn Carousel",
+        "settings": [
+            {
+                "type": "collection",
+                "id": "collection",
+                "label": "Collection"
+            }
+        ],
+        "presets":[
+            {
+                "name":"Featured Collection Carousel"
+            }
+        ]
+    }
+{% endschema %}
