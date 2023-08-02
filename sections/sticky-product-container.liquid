@@ -1,0 +1,93 @@
+{%assign product = section.settings.product%}
+
+<div class="sticky-product-container">
+    <div class="background" id="sticky-product-container-background">
+        {%for block in section.blocks%}
+            {%case block.type%}
+
+                {%when 'image'%}
+                    <img src="{{block.settings.image | img_url: '1000x'}}">
+                {%when 'text'%}
+                    <div class="background-text">{{block.settings.text}}</div>
+            {%endcase%}
+        {%endfor%}
+    </div>
+    <div class="sticky-product-product" id="sticky-product-product">
+        <div class="close">
+            <span id="close-sticky-product">&times</span>
+        </div>
+        <div class="message-and-image">
+            <a href="{{section.settings.link}}">
+                <p><span class="fancy">{{section.settings.message}}</span></p>
+                <img src="{{section.settings.sticky_image | img_url: "500x"}}">
+            </a>
+        </div>
+        <div class="emty-div">
+            &nbsp
+        </div>
+    </div>
+</div>
+
+<script>
+
+    const closeStickyProduct = document.querySelector("#close-sticky-product")
+    const stickyProductProduct = document.querySelector("#sticky-product-product")
+    const stickyProductContainerBackground = document.querySelector("#sticky-product-container-background")
+
+    closeStickyProduct.addEventListener("click",function(){
+        stickyProductProduct.style.display = "none"
+        stickyProductContainerBackground.style.opacity = 1
+    })
+</script>
+
+
+{% schema %}
+    {
+        "settings":[
+            {
+                "type": "url",
+                "id": "link",
+                "label": "Link"
+            },
+            {
+                "type": "text",
+                "id": "message",
+                "label": "Message"
+            },
+            {
+                "type": "image_picker",
+                "id": "sticky_image",
+                "label": "Sticky Image"
+            }
+        ],
+        "blocks":[
+            {
+                "type":"image",
+                "name":"Image",
+                "settings":[
+                    {
+                        "type": "image_picker",
+                        "id": "image",
+                        "label": "Image"
+                    }
+                ]
+            },
+            {
+                "type":"text",
+                "name":"text",
+                "settings":[
+                    {
+                        "type": "richtext",
+                        "id": "text",
+                        "label": "Text"
+                    }
+                ]
+            }
+        ],
+        "presets":[
+            {
+                "name":"Sticky Product Container"
+            }
+        ]
+    }
+{% endschema %}
