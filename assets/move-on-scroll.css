@@ -1,0 +1,22 @@
+.moving-on-scroll-container #hero {
+  position: fixed;
+  transform: translateY(0);
+  top: 0;
+}
+.moving-on-scroll-container #hero, .moving-on-scroll-container #final {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+}
+.moving-on-scroll-container section {
+  min-height: 100%;
+  text-align: center;
+  padding: 100px 80px;
+}
+.moving-on-scroll-container #section1 {
+  margin-top: 80%;
+}

@@ -242,7 +242,11 @@
     {{ 'base.css' | asset_url | stylesheet_tag }}
     {{ 'section-featured-collection-carousel.css' | asset_url | stylesheet_tag }}
     {{ 'video-background-header.css' | asset_url | stylesheet_tag }}
-    {{ 'section-sticky-product-container.css' | asset_url | stylesheet_tag }}
+
+    {{ 'move-on-scroll.css' | asset_url | stylesheet_tag }}
+
+
+
 
     {%- unless settings.type_body_font.system? -%}
       <link rel="preload" as="font" href="{{ settings.type_body_font | font_url }}" type="font/woff2" crossorigin>

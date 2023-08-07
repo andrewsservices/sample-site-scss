@@ -1,0 +1,46 @@
+<div class="moving-on-scroll-container">
+    <section id="hero" style="transform: translateY(0px);">
+        <div class="left">
+          <h1>Build Better Backends</h1>
+          <p>The only platform that gives AI the ability to autonomously build web services.</p>
+          <div id="heroLeftBg" class="hero-bg" style="opacity: 1;"></div>
+        </div>
+        <div class="right">
+          <div id="elements">
+            elements
+          </div>
+          <div id="heroRightBg" class="hero-bg" style="opacity: 1;"></div>
+        </div>
+      </section>
+</div>
+
+
+
+
+{% schema %}
+    {
+        "name":"Moving Collection Scroll",
+        "settings":[
+            {
+                "type": "image_picker",
+                "id": "image_one",
+                "label": "Image One"
+            },
+            {
+                "type": "image_picker",
+                "id": "image_two",
+                "label": "Image Two"
+            },
+            {
+                "type": "image_picker",
+                "id": "image_three",
+                "label": "Image Three"
+            }
+        ],
+        "presets":[
+            {
+                "name":"Moving Collection On Scroll"
+            }
+        ]
+    }
+{% endschema %}

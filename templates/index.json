@@ -45,10 +45,19 @@
         "message": "Our Best T Shirt Deal Yet!",
         "sticky_image": "shopify:\/\/shop_images\/Pngtree_t-shirt_mockup_3610313.png"
       }
+    },
+    "b9d3d659-4784-435a-8f03-1df8ce4d40fa": {
+      "type": "moving-collection-on-scroll",
+      "settings": {
+        "image_one": "shopify:\/\/shop_images\/pexels-john-petalcurin-4317157.jpg",
+        "image_two": "shopify:\/\/shop_images\/pexels-max-ravier-5873907.jpg",
+        "image_three": "shopify:\/\/shop_images\/pexels-lukas-zvikas-1075947.jpg"
+      }
     }
   },
   "order": [
     "8c961285-a429-4f40-ba3c-9290ceb22e26",
-    "a34efe93-84e5-43b9-8712-9994af94e40f"
+    "a34efe93-84e5-43b9-8712-9994af94e40f",
+    "b9d3d659-4784-435a-8f03-1df8ce4d40fa"
   ]
 }
